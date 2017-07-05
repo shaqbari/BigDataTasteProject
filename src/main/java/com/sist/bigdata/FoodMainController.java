@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.sist.food.dao.*;
 import com.sist.naver.NaverBlogManager;
+import com.sist.r.RManager;
 
 import java.util.*;
 
@@ -29,6 +30,9 @@ public class FoodMainController {
 	
 	@Autowired
 	private NaverBlogManager nbm;
+	
+	@Autowired
+	private RManager rm;
 	
 	@RequestMapping("main/main.do")
 	public String main_page(Model model){
@@ -80,8 +84,8 @@ public class FoodMainController {
 		}
 		foodCopyToLocal();//이후 R로 보낸다.
 		
-		
-		
+		String json=rm.tasteData();
+		model.addAttribute("json", json);
 		model.addAttribute("vo", vo);
 		model.addAttribute("poster", poster);
 		model.addAttribute("main_jsp","food/fooddetail.jsp");
@@ -93,6 +97,9 @@ public class FoodMainController {
 			FileSystem fs=FileSystem.get(conf);
 			if (fs.exists(new Path("/food_input_ns1/naver.txt"))) {
 				fs.delete(new Path("/food_input_ns1/naver.txt"), true);
+			}
+			if (fs.exists(new Path("/food_input_ns1/site.txt"))) {
+				fs.delete(new Path("/food_input_ns1/site.txt"), true);
 			}
 			if (fs.exists(new Path("/food_output_ns1"))) {//파일이 두개생기기 때문에 폴더째로 지워야 한다.
 				fs.delete(new Path("/food_output_ns1"), true);
@@ -108,6 +115,7 @@ public class FoodMainController {
 		try {
 			FileSystem fs=FileSystem.get(conf);
 			fs.copyFromLocalFile(new Path("/home/sist/food_data/naver.txt"), new Path("/food_input_ns1/naver.txt"));
+			fs.copyFromLocalFile(new Path("/home/sist/food_data/site.txt"), new Path("/food_input_ns1/site.txt"));
 			fs.close();
 			
 		} catch (Exception e) {

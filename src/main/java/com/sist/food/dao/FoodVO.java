@@ -1,5 +1,8 @@
 package com.sist.food.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FoodVO {
     private int no;
     private String name;
@@ -13,7 +16,17 @@ public class FoodVO {
     private String good;
     private String soso;
     private String bad;
+    private List<String> review= new ArrayList<String>();
     
+    
+    
+    
+	public List<String> getReview() {
+		return review;
+	}
+	public void setReview(List<String> review) {
+		this.review = review;
+	}
 	public String getLink() {
 		return link;
 	}

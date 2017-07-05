@@ -1,4 +1,5 @@
 package com.sist.food.dao;
+import java.io.FileWriter;
 /*
  * 		$.ajax({
  * 			type:"POST",
@@ -19,7 +20,7 @@ package com.sist.food.dao;
                     <li>
                       <img class="center-croping"
                            src="https://mp-seoul-image-production-s3.mangoplate.com/keyword_search/meta/pictures/6mthe-5w3p5tg67w.jpg?fit=around|600:400&amp;crop=600:400;*,*&amp;output-format=jpg&amp;output-quality=80"
-                           alt="6¿ùÀÇ ÇÖÇÑ Ä«Æä º£½ºÆ® 20°÷ »çÁø"
+                           alt="6ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® 20ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
                            onerror="this.src='https://mp-seoul-image-production-s3.mangoplate.com/web/resources/kssf5eveeva_xlmy.jpg?fit=around|*:*&amp;crop=*:*;*,*&amp;output-format=jpg&amp;output-quality=80'"
                       />
 
@@ -29,9 +30,9 @@ package com.sist.food.dao;
                         <figure class="ls-item">
                           <figcaption class="info">
                             <div class="info_inner_wrap">
-                              <span class="title">6¿ùÀÇ ÇÖÇÑ Ä«Æä º£½ºÆ® 20°÷</span>
+                              <span class="title">6ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® 20ï¿½ï¿½</span>
 
-                              <p class="desc">"¾È °¡º¼ ¼ö ¾øÀ»°É¿ä?"</p>
+                              <p class="desc">"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½É¿ï¿½?"</p>
 
  * 
  * 
@@ -100,7 +101,7 @@ public class FoodManager {
                       <div class="thumb">
                         <img class="center-croping"
                              src="https://mp-seoul-image-production-s3.mangoplate.com/added_restaurants/277947_1471513817405142.jpg?fit=around|738:738&amp;crop=738:738;*,*&amp;output-format=jpg&amp;output-quality=80"
-                             alt="»Í³ª¹«ÀïÀÌ »çÁø - ¼­¿ï½Ã °­³²±¸ ´ëÄ¡µ¿ 896-5"
+                             alt="ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ 896-5"
                              onerror="this.src='https://mp-seoul-image-production-s3.mangoplate.com/web/resources/kssf5eveeva_xlmy.jpg?fit=around|*:*&amp;crop=*:*;*,*&amp;output-format=jpg&amp;output-quality=80'"
                         />
                       </div>
@@ -108,15 +109,15 @@ public class FoodManager {
 
 	                  <figcaption>
 	                    <div class="info">
-	                      <!--<button class="btn-type-icon share-big" ng-click="open_share_layer('3000', 'mjR_ZoQd1e')">°øÀ¯ÇÏ±â</button>-->
+	                      <!--<button class="btn-type-icon share-big" ng-click="open_share_layer('3000', 'mjR_ZoQd1e')">ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½</button>-->
 	                      <div class="wannago_wrap">
 	                        <button class="btn-type-icon favorite wannago_btn " data-restaurant_uuid="3000" data-action_id=""></button>
-	                        <p class="wannago_txt">°¡°í½Í´Ù </p>
+	                        <p class="wannago_txt">ï¿½ï¿½ï¿½ï¿½Í´ï¿½ </p>
 	                      </div>
 
-	                      <span class="title"> <a href="/restaurants/mjR_ZoQd1e" onclick="common_ga('PG_TOPLIST', 'CLICK_RESTAURANT_NAME')">1.<h3> »Í³ª¹«ÀïÀÌ</h3></a></span>
+	                      <span class="title"> <a href="/restaurants/mjR_ZoQd1e" onclick="common_ga('PG_TOPLIST', 'CLICK_RESTAURANT_NAME')">1.<h3> ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</h3></a></span>
 	                      <strong class="point"><span>4.5</span></strong>
-	                      <p class="etc">¼­¿ï½Ã °­³²±¸ ´ëÄ¡µ¿ 896-5</p>
+	                      <p class="etc">ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ 896-5</p>
 	                    </div>
 	                  </figcaption>
 	                </figure>
@@ -126,15 +127,15 @@ public class FoodManager {
 	                      <div class="thumb" style="background-image: url('http://mud-kage.kakao.co.kr/14/dn/btqfzSfSkAT/ZV8YIpeXbMnKNfuhEq6Kj0/o.jpg'), url('https://mp-seoul-image-production-s3.mangoplate.com/web/resources/jmcmlp180qwkp1jj.png?fit=around|*:*&crop=*:*;*,*&output-format=jpg&output-quality=80')">
 	                      </div>
 	                    <figcaption>
-	                      ¼Û
+	                      ï¿½ï¿½
 	                    </figcaption>
 	                  </figure>
 	                  <p class="short_review" onclick="common_ga('PG_TOPLIST', 'CLICK_FEATURED_REVIEW')" data-restaurant_key="mjR_ZoQd1e" data-is_long_reivew="">
-	                      ¸ÀÀÖ¾î¿ä!! ÂÌ±êÇÏ°í º¸µéº¸µéÇÑ ½Ä°¨...¸Å¿î°Ç Àå³­¾Æ´Ï°Ô ÈûµéÁö¸¸ ¸ÀÀÖ¾î¼­ °è¼Ó ¸Ô°ÔµÇ¿ä. À¯¸íÇÑ°÷ÀÌ¶ó ¿þÀÌÆÃ Á»ÀÖ¾î¿ä.
+	                      ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½!! ï¿½Ì±ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½éº¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ä°ï¿½...ï¿½Å¿ï¿½ï¿½ ï¿½å³­ï¿½Æ´Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½ ï¿½Ô°ÔµÇ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½Ì¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½.
 	                  </p>
 
 	                  <p class="long_review">
-	                    ¸ÀÀÖ¾î¿ä!! ÂÌ±êÇÏ°í º¸µéº¸µéÇÑ ½Ä°¨...¸Å¿î°Ç Àå³­¾Æ´Ï°Ô ÈûµéÁö¸¸ ¸ÀÀÖ¾î¼­ °è¼Ó ¸Ô°ÔµÇ¿ä. À¯¸íÇÑ°÷ÀÌ¶ó ¿þÀÌÆÃ Á»ÀÖ¾î¿ä.
+	                    ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½!! ï¿½Ì±ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½éº¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ä°ï¿½...ï¿½Å¿ï¿½ï¿½ ï¿½å³­ï¿½Æ´Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½ ï¿½Ô°ÔµÇ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½Ì¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½.
 	                  </p>
 
 
@@ -143,7 +144,7 @@ public class FoodManager {
 
 
 	                <a href="/restaurants/mjR_ZoQd1e" class="btn-detail" onclick="common_ga('PG_TOPLIST', 'CLICK_MORE_INFO_BTN')">
-	                  »Í³ª¹«ÀïÀÌ ´õº¸±â >
+	                  ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ >
 	                </a>
 	              </div>
 	            </li>
@@ -154,7 +155,7 @@ public class FoodManager {
 		// /top_lists/1309_spicy
 		// list.do?page=1&no=10
 		// list.do/1/10
-		// ³ªÁîÈ¥ 
+		// ï¿½ï¿½ï¿½ï¿½È¥ 
 		// => 16 / 17 / 14
 		List<FoodVO> list=new ArrayList<FoodVO>();
 		try
@@ -193,7 +194,7 @@ public class FoodManager {
 	 * <div class="list-photo_wrap">
           <figure class="list-photo">
             <meta content="https://mp-seoul-image-production-s3.mangoplate.com/added_restaurants/65460_1479194636961663.jpg?fit=around|512:512&amp;crop=512:512;*,*&amp;output-format=jpg&amp;output-quality=80"/>
-            <figure class="restaurant-photos-item" onclick="common_ga('PG_RESTAURANT', 'CLICK_PICTURE');" ng-click="mp20_gallery_open(0)" role="img" aria-label="¸Å´ºÆÑÆ®Ä¿ÇÇ | µµ»ê°ø¿ø ¸ÀÁý¡¤Ä«Æä - ¸Á°íÇÃ·¹ÀÌÆ®" title="¸Å´ºÆÑÆ®Ä¿ÇÇ | µµ»ê°ø¿ø ¸ÀÁý¡¤Ä«Æä - ¸Á°íÇÃ·¹ÀÌÆ®">
+            <figure class="restaurant-photos-item" onclick="common_ga('PG_RESTAURANT', 'CLICK_PICTURE');" ng-click="mp20_gallery_open(0)" role="img" aria-label="ï¿½Å´ï¿½ï¿½ï¿½Æ®Ä¿ï¿½ï¿½ | ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä«ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½Æ®" title="ï¿½Å´ï¿½ï¿½ï¿½Æ®Ä¿ï¿½ï¿½ | ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä«ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½Æ®">
               <img class="center-croping"
 	 */
 	public FoodVO foodDetailData(String link)
@@ -227,6 +228,18 @@ public class FoodManager {
 				else if(i==3)
 					vo.setBad(elem.text());
 			}
+			Elements reviewElem=doc.select("span.short_review");
+			String data="";
+			for (int a = 0; a < reviewElem.size(); a++) {
+				//vo.getReview().add(reviewElem.get(a).text()+"\n");
+				data+=reviewElem.get(a).text()+"\n";
+				
+			}
+			data=data.substring(0, data.lastIndexOf("\n"));
+			FileWriter fw=new FileWriter("/home/sist/food_data/site.txt");
+			fw.write(data);
+			fw.close();
+			
 		}catch(Exception ex)
 		{
 			System.out.println(ex.getMessage());

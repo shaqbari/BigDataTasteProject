@@ -42,7 +42,22 @@
 				<div id="chartdiv"></div>
 				<script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
 				
-				<script src="js/index.js"></script>
+				<script>
+				var chart = AmCharts.makeChart( "chartdiv", {
+					  "type": "pie",
+					  "theme": "light",
+					  "dataProvider": <%=request.getAttribute("json")%>,
+					  "valueField": "count",
+					  "titleField": "taste",
+					   "balloon":{
+					   "fixedPosition":true
+					  },
+					  "export": {
+					    "enabled": true
+					  }
+					} );
+				
+				</script>
              </center>       
             <div class="clr"></div>
                            
